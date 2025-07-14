@@ -89,7 +89,7 @@
     }
   }
   .help-desc {
-    @apply text-center text-slate-400 hidden;
+    @apply text-center text-slate-400 hidden -mb-2 transition-all;
   }
   .btn {
     @apply px-4 py-1 inline-block border bg-slate-200 hover:bg-slate-300 border-slate-300 text-slate-800 rounded transition-all;
@@ -104,7 +104,7 @@
   }
   /* trending sec  */
   .trending-sec {
-    @apply flex gap-3.5 items-center justify-center text-center flex-wrap font-semibold;
+    @apply flex gap-3.5 items-center justify-center text-center flex-wrap font-semibold max-h-[301px] overflow-y-auto;
     & > * {
       @apply flex-col sm:flex-row;
       width: 100%;
