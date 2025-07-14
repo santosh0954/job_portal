@@ -308,11 +308,14 @@
   .table {
     display: table;
   }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
+  .h-auto {
+    height: auto;
   }
   .h-max {
     height: max-content;
+  }
+  .max-h-60 {
+    max-height: calc(var(--spacing) * 60);
   }
   .min-h-\[calc\(100vh-120px\)\] {
     min-height: calc(100vh - 120px);
@@ -766,6 +769,16 @@
       display: block;
     }
   }
+  .sm\:h-60 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 60);
+    }
+  }
+  .sm\:max-h-max {
+    @media (width >= 40rem) {
+      max-height: max-content;
+    }
+  }
   .sm\:w-\[calc\(50\%-\.875rem\)\] {
     @media (width >= 40rem) {
       width: calc(50% - .875rem);
@@ -940,7 +953,8 @@
 @layer components {
   .list-block {
     margin-bottom: calc(var(--spacing) * 4);
-    height: 400px;
+    height: auto;
+    max-height: calc(var(--spacing) * 60);
     list-style-type: none;
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -967,6 +981,12 @@
     transition-duration: 300ms;
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+    @media (width >= 40rem) {
+      height: 400px;
+    }
+    @media (width >= 40rem) {
+      max-height: 100%;
+    }
     li {
       position: relative;
       padding-bottom: calc(var(--spacing) * 2);
