@@ -76,7 +76,7 @@
       background-color: var(--color-primary-dark);
     }
     .title {
-      @apply text-lg font-medium;
+      @apply text-lg font-medium text-shadow-2xs;
     }
 
     .arrow-icon {

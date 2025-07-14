@@ -19,15 +19,30 @@
 </head>
 
 <body>
-  <header class="bg-m bg-primary border-b border-transparent">
-    <div class="container text-white py-4 ">
+  <header class="bg-m bg-primary border-b-2 border-white  md:border-transparent">
+    <div class="container text-white py-4 grid grid-cols-1 gap-4 sm:grid-cols-3 items-center justify-between sm:gap-4">
       <div>
         <a href="./" class="flex flex-col justify-center ">
           <!-- <span class="font-bold text-2xl">Sarkari</span>
           <span class="font-medium text-white/90">SearchResult.info</span> -->
-          <img src="./img/logo.png" alt="" width="175">
+          <img src="./img/logo.svg" alt="" width="175" class="w-32 md:w-40  xl:w-44">
         </a>
       </div>
+      <div>
+        <form class="flex items-stretch justify-center">
+          <input type="search"
+            class="border border-white/50 flex-1 px-3 py-1 placeholder:text-white/50 text-white bg-transparent rounded-s focus:outline-none focus:border-white/80"
+            placeholder="Search here..."> <button
+            class="btn bg-white/20 border-white/20 hover:border-amber-50 rounded-s-none hover:bg-amber-50 hover:text-[var(--color-primary)] text-white border-s-0 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="hidden sm:block"></div>
 
     </div>
     <nav class="bg-white py-1 mb-1 hidden md:block">
@@ -43,7 +58,7 @@
       </div>
     </nav>
   </header>
-  <main class="my-6 space-y-6 min-h-[calc(100vh-120px)]">
+  <main class="mt-6 mb-12 space-y-6 min-h-[calc(100vh-120px)]">
     <!-- trending jobs section start -->
     <section class="container">
       <div class="bg-white rounded shadow-sm pb-3 border-b border-transparent relative">
@@ -296,7 +311,7 @@
   <!-- faq section start  -->
 
   <!-- faq section end  -->
-  <footer class="bg-[#2c0713] text-gray-300 py-10 px-4 sm:px-6 lg:px-20 text-sm">
+  <footer class="bg-[#2c0713] text-gray-300 pt-10 px-4 sm:px-6 lg:px-20 text-sm">
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
       <!-- About Section -->
@@ -339,7 +354,7 @@
 
     </div>
 
-    <div class="border-t border-white/20 mt-10 pt-5 text-center text-sm text-gray-500">
+    <div class="border-t border-white/20 mt-10 py-3 text-center text-sm text-white/60">
       © 2025 Sarkarisearchresult.info All rights reserved.
     </div>
   </footer>
