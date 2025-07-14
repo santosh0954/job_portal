@@ -913,7 +913,6 @@
     }
   }
   .help-desc {
-    margin-bottom: calc(var(--spacing) * -2);
     display: none;
     text-align: center;
     color: var(--color-slate-400);
