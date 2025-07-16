@@ -10,8 +10,8 @@ $(function () {
 
     $this.toggleClass("open");
     $this.next(".content").slideToggle(500);
-    $this.nextAll(".help-desc").fadeToggle();
-    $this.nextAll(".btn-wrapper").fadeToggle();
+    $this.nextAll(".help-desc").slideToggle();
+    $this.nextAll(".btn-wrapper").slideToggle();
 
     sessionStorage.setItem(key, $this.hasClass("open"));
   });
@@ -46,5 +46,9 @@ $(function () {
       $this.nextAll(".help-desc").show();
       $this.nextAll(".btn-wrapper").hide();
     }
+  });
+  // toggle menu
+  $(".menu-toggle-btn").on("click", function () {
+    $(".navbar-nav").slideToggle();
   });
 });

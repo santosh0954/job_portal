@@ -32,7 +32,7 @@
     @apply text-indigo-700 hover:text-indigo-900 hover:underline transition-all;
   }
   .navbar {
-    @apply list-none flex justify-between items-center gap-3 uppercase font-semibold;
+    @apply list-none flex flex-col md:flex-row justify-between items-center gap-3 uppercase font-semibold;
     a {
       color: var(--color-primary);
       @apply py-1 block px-4 transition-all hover:text-white rounded;
@@ -141,4 +141,8 @@
   .text-primary-dark {
     color: var(--color-primary-dark);
   }
+}
+
+.menu-toggle-btn {
+  @apply size-8  items-center content-center ms-auto p-1 text-white/60 border-white/60 bg-transparent cursor-pointer hover:bg-white hover:text-[var(--color-primary)] border transition-all rounded flex md:hidden;
 }
