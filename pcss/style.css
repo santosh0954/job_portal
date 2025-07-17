@@ -7,6 +7,7 @@
     background-color: #f0f2ef; /* Tailwind gray-200 */
     color: #0d160b;
     font-size: 95%;
+    font-weight: normal;
   }
   ::selection {
     background: #f8bbcd;
@@ -29,7 +30,7 @@
     @apply !max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   a.link {
-    @apply text-indigo-700 hover:text-indigo-900 hover:underline transition-all;
+    @apply text-blue-700 hover:text-blue-900 active:text-green-700 hover:underline text-shadow-2xs  transition-all;
   }
   .navbar {
     @apply list-none flex flex-col md:flex-row justify-between items-center gap-3 uppercase font-semibold;
@@ -70,7 +71,7 @@
     }
   }
   .toggle-btn {
-    @apply text-xl px-4 py-1.5 rounded-t font-semibold mb-4  text-white cursor-pointer flex justify-between items-center transition-all;
+    @apply text-xl px-4 py-1.5 rounded-t font-semibold mb-3  text-white cursor-pointer flex justify-between items-center transition-all;
     background-color: var(--color-primary);
     &:hover {
       background-color: var(--color-primary-dark);
@@ -92,7 +93,7 @@
     @apply text-center text-slate-400 hidden transition-all;
   }
   .btn {
-    @apply px-4 py-1 inline-block border bg-slate-200 hover:bg-slate-300 border-slate-300 text-slate-800 rounded transition-all;
+    @apply px-4 py-1 inline-block border bg-slate-200 hover:bg-slate-300 border-slate-300 text-slate-800 rounded  cursor-pointer shadow transition-all;
   }
   .btn-primary {
     @apply text-white/95 hover:text-white;
@@ -145,4 +146,14 @@
 
 .menu-toggle-btn {
   @apply size-8  items-center content-center ms-auto p-1 text-white/60 border-white/60 bg-transparent cursor-pointer hover:bg-white hover:text-[var(--color-primary)] border transition-all rounded flex md:hidden;
+}
+.table-bordered {
+  --bdr-color: #d1d2d4;
+  @apply border border-[var(--bdr-color)];
+  td {
+    @apply border border-[var(--bdr-color)] p-2;
+  }
+  th {
+    @apply border border-[var(--bdr-color)] p-2;
+  }
 }
