@@ -65,30 +65,30 @@
     </nav>
   </header>
   <main class="mt-6 mb-12 space-y-6 min-h-[calc(100vh-120px)]">
-    <div class="max-w-2xl bg-white rounded shadow p-5 mx-3 sm:mx-auto">
-      <header class="mb-2">
-        <h1 class="text-primary font-semibold  text-xl">Login Here</h1>
-        <p class="text-blue-600 font-medium">Manage Your Command Center</p>
-      </header>
-      <hr class="border-gray-100 border-1 mb-2">
-      <form action="#" class="flex flex-col gap-4">
-        <div>
-          <label for="email" class="font-medium mb-1 block text-gray-700">Email</label>
-          <input id="email" type="email" placeholder="Enter email"
-            class="w-full border py-1 rounded px-3 focus:outline-[var(--color-primary)]/40 border-gray-400">
-        </div>
-        <div>
-          <label for="password" class="font-medium mb-1 block text-gray-700">Password</label>
-          <input id="password" type="password" placeholder="Enter password"
-            class="w-full border py-1 rounded px-3 focus:outline-[var(--color-primary)]/40 border-gray-400">
-        </div>
-        <div>
-          <button class="btn btn-primary" type="submit">Submit</button>
-          <p class="mt-2 text-gray-600 text-sm font-medium text-right">
-            Don't have account? Go to <a href="register.html" class="link">Register</a>
-          </p>
-        </div>
-      </form>
+    <div class="container">
+      <section class="container  bg-white rounded shadow p-5 space-y-4">
+        <header class="flex justify-between items-center">
+          <h1 class="text-xl font-semibold text-primary">Create a Category</h1>
+        </header>
+        <form action="#" class="space-y-6">
+          <div>
+            <label for="category_name" class="font-medium mb-1 block text-gray-700">Category Name</label>
+            <input required name="category_name" id="category_name" type="text" placeholder="Enter Category Name"
+              autofocus class="form-control">
+          </div>
+          <div>
+            <label for="parent_category" class="font-medium mb-1 block text-gray-700">Parent Category</label>
+            <select name="parent_category" id="parent_category" type="date" class="form-control">
+              <option selected value="1">Online Forms</option>
+              <option value="2">Admission</option>
+              <option value="3">Syllabus</option>
+              <option value="4">Answer Key</option>
+            </select>
+          </div>
+          <button class="btn btn-primary mr-2" type="submit">Submit</button>
+          <button class="btn" type="reset">Reset</button>
+        </form>
+      </section>
     </div>
   </main>
   <footer class="bg-[#2c0713] text-gray-300 pt-10 px-4 sm:px-6 lg:px-20 text-sm">
